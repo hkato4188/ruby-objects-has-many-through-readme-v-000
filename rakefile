@@ -1,0 +1,15 @@
+require_relative './lib/customer'
+require_relative './lib/meal'
+require_relative './lib/waiter'
+require 'pry'
+require 'rake'
+
+def reload!
+  load './lib/customer.rb'
+  load './lib/meal.rb'
+  load './lib/waiter.rb'
+end
+
+task :console do
+  Pry.start
+end
